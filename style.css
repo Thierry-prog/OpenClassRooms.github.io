@@ -1,0 +1,535 @@
+body
+{
+	margin: auto;
+}
+.header
+{
+	text-align: center;
+	width: 100%;
+	background-color: #00796b;
+	font-size: 1.3em; /* taille de la bordure */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+h1
+{
+	display: block;
+	font-size: 2em;
+}
+.T-header
+{
+	color: #F0C300;
+	font-size: 1.5em; /* pour augmenter la taille du titre sans que ça impacte la taille de la bordure*/
+	text-decoration: none; /* pour enlever le souligné*/
+}
+
+/*Prochainement*/
+.prochainement_container
+{
+  display: flex;
+  justify-content: center;
+}
+.prochainement
+{
+  font-size: 2.1em;
+  display: flex;
+  justify-content: center;
+  color: #ffd54f;
+  border: 2px #00796b;
+  background-color: #00796b;
+  border-radius: 20px;
+  width: 35%;
+}
+.prochainement i /*définition de l'animation sur l'ensemble des points*/
+{
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.0s;
+    font-size: 1em;
+}
+.prochainement i+i /*délai sur le point suivant*/
+{
+    -webkit-animation-delay: 0.2s;
+}
+.prochainement i+i+i 
+{
+    -webkit-animation-delay: 0.4s;
+}
+
+@-webkit-keyframes dot 
+{
+      0% { opacity: 0; }
+      40%{ opacity: 1; }
+     60% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.footer
+{
+	background-color: #00796b;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+  font-size: 150%;
+}
+
+.footer--l
+{
+	text-decoration: none;
+  	color: #FDCB46;
+  	margin: 0 2% 0;
+}
+.footer--l:hover /*définition de l'animation sur le "wiggle"*/
+{
+  -webkit-animation: wiggle 100ms;
+          animation: wiggle 100ms;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+@-webkit-keyframes wiggle
+{
+  0% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+  100% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+}
+/*Menus*/
+/*disposition menus sur l'index*/
+.menu
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+}
+.menu-commun
+{
+	width: 35%;
+  height: 400px;
+  margin: 3%;
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Menu 1 sur l'index*/
+.menu-note
+{
+	background-color: #FCDFDB;
+}  	
+.menu-note:hover /*zoom quand on survol*/
+{
+	font-size: 3em; /*on augmente donc la taille*/
+  opacity: 0.8;
+}
+.degrade-note /*Animation dégradé de la note*/
+{
+  font-size: 150%;
+	background: -webkit-linear-gradient(left, #F04A5E, #F78F6A);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  margin: 0 3%;
+}
+.menu-note-titre /*titre note enchanté*/
+{
+	font-family: 'Devonshire';
+	margin: 0 3%;
+}
+.menu-lien-note /*lien pour arriver au menu1*/
+{
+	text-decoration: none;
+  font-family: 'Kalam';
+  color: #3C1218;
+}
+h2
+{
+  text-align: center;
+}
+
+/*Page Menu 1*/
+.grand-menu-note /*le gros bloc sur la page menu-1.html*/
+{
+  background-color: #FCDFDB;
+  color: #3C1218;
+  margin: 4%;
+  text-align: center;
+  padding: 2% 3%;
+}
+.bloc_titre 
+{
+  font-size: 350%;
+  margin: 0.5em;
+}
+.bloc__menu /*enfant de grand-menu-note avec la description des plats et les parties entrée, plat, dessert*/
+{
+  font-size: 150%;
+  font-family: "Kalam"
+}
+.barre /*les barres à côté des titres d'entrée , plats, desserts*/
+{
+  width: 30%;
+  background-color: #3C1218;
+  height: 10px;
+  margin: 3%;
+}
+.bloc__menu__ssTitre /*disposition des titres entrée, plats, dessert*/
+{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 130%;
+  align-items: center;
+  width: auto;
+}
+/*Animation souligné sur les sections entrée plats desserts*/
+.bloc__menu__ssTitre--souligneN  /*va faire en sorte que le trait ne traverse pas toute la largeur de la page*/
+{
+  position: relative;
+}
+
+.bloc__menu__ssTitre--souligneN::after 
+{
+  content: ''; /*vu qu'il n'a pas de contenu*/
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #3C1218;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+.bloc__menu__ssTitre--souligneN:hover::after 
+{
+  width: 100%;
+}
+/*---------------------------------------------------*/
+
+.bloc__menu__plat /*Disposition des descriptions entrée, plats*/
+{
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+  font-family: 'Kalam';
+}
+.bloc__menu__plat--prix 
+{
+  font-weight: bold;
+  font-family: 'Kalam';
+}
+.bloc__menu__plat--dessert 
+{
+  text-align: left; /*disposition des descriptions dessert*/
+  margin: 2%;
+  font-family: 'Kalam';
+}
+
+/*Menu 2 sur l'index*/
+.menu-chic
+{
+	background-color: #FFF5FE;
+}
+.menu-chic:hover /*zoom quand on survol*/
+{
+	font-size: 3em;
+  	opacity: 0.8;
+}
+.menu-chic-titre /*titre du menu 2*/
+{
+	background: -webkit-linear-gradient(left, #C77412, #905BFD); /* dégradé qui marche o/ */
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	font-family: 'Croissant One';
+}
+.menu-lien-chic
+{
+	text-decoration: none;
+  	color: #C77412;
+  	font-family: 'Gelasio';
+}
+
+/* Page Menu 2*/
+.grand-menu-chic /*le gros bloc sur la page menu-2.html*/
+{
+  background-color: #FFF5FE;
+  color: #C77412;
+  margin: 4%;
+  text-align: center;
+  padding: 2% 5%;
+}
+.barre-chic /*les 3 barres de chaque couleur du menu 2*/
+{
+  background: #C77412;
+  width: 30%;
+  height: 10px;
+}
+
+.barre-chic2 
+{
+  background: #A56799;
+  width: 30%;
+  height: 10px;
+}
+
+.barre-chic3 
+{
+  background: #905BFD;
+  width: 30%;
+  height: 10px;
+}
+
+.bloc__menu__ssTitre_chic_entree /*disposition des titres entrée, plats, dessert*/
+{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 130%;
+  align-items: center;
+  width: auto;
+  color: #C77412;
+}
+.bloc__menu__ssTitre_chic_plat
+{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 130%;
+  align-items: center;
+  width: auto;
+  color: #A56799;
+}
+.bloc__menu__ssTitre_chic_dessert
+{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 130%;
+  align-items: center;
+  width: auto;
+  color: #905BFD;
+}
+.bloc__menu__plat_chic_entree /*disposition des descriptions entrée, plats*/
+{
+  color: #C77412;
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.bloc__menu__plat_chic_plat
+{
+  color: #A56799;
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.bloc__menu__plat_chic_dessert
+{
+  text-align: left;
+  color: #905BFD;
+  margin: 2%;
+}
+
+/*Animation souligné sur les sections entrée plats desserts*/
+.bloc__menu__ssTitre--souligneC 
+{
+  position: relative;
+}
+
+.bloc__menu__ssTitre--souligneC::after 
+{
+  content: ''; /*vu qu'il n'a pas de contenu*/
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #C77412;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+.bloc__menu__ssTitre--souligneC:hover::after 
+{
+  width: 100%;
+}
+
+.bloc__menu__ssTitre--souligneC1 
+{
+  position: relative;
+}
+
+.bloc__menu__ssTitre--souligneC1::after 
+{
+  content: ''; /*vu qu'il n'a pas de contenu*/
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #A56799;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+.bloc__menu__ssTitre--souligneC1:hover::after 
+{
+  width: 100%;
+}
+
+.bloc__menu__ssTitre--souligneC2 
+{
+  position: relative;
+}
+
+.bloc__menu__ssTitre--souligneC2::after 
+{
+  content: ''; /*vu qu'il n'a pas de contenu*/
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #905BFD;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+.bloc__menu__ssTitre--souligneC2:hover::after 
+{
+  width: 100%;
+}
+
+/*Menu 3 sur l'index*/
+.menu-delice
+{
+	background-color: #F9F9F9;
+}
+.menu-delice:hover /*zoom quand on survol*/
+{
+	font-size: 3em;
+  	opacity: 0.8;
+}
+.menu-delice-titre
+{
+	background: -webkit-linear-gradient(left, #0228DD, #229DF9);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	font-family: 'Dancing Script';
+}
+.menu-lien-delice
+{
+	text-decoration: none;
+	color: #229DF9;
+	font-family: 'Kalam';
+}
+
+/*Page Menu 3*/
+.grand-menu-delice /*le gros bloc sur la page menu-3.html*/
+{
+  background-color: #DCDCDC;
+  margin: 4%;
+  text-align: center;
+  font-family: 'Dancing Script';
+  padding: 2% 3%;
+}
+.barre-delice
+{
+  background: #0228DD;
+  width: 30%;
+  height: 10px;
+}
+
+.barre-delice2 
+{
+  background: #0670F3;
+  width: 30%;
+  height: 10px;
+}
+
+.barre-delice3 
+{
+  background: #229DF9;
+  width: 30%;
+  height: 10px;
+}
+/*Animation souligné sur les sections entrée plats desserts*/
+.bloc__menu__ssTitre--souligneDP 
+{
+  position: relative;
+}
+
+.bloc__menu__ssTitre--souligneDP::after 
+{
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: black;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+.bloc__menu__ssTitre--souligneDP:hover::after 
+{
+  width: 100%;
+}
+
+/*Menu 4 sur l'index*/
+.menu-palette
+{
+  	text-align: center;
+}
+.menu-palette:hover /*zoom quand on survol*/
+{
+	font-size: 3em;
+  	opacity: 0.8;
+}
+.menu-palette-titre
+{
+	background: -webkit-linear-gradient(right, #3D9339, #BFFF7E);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	font-family: 'Kaushan Script';
+}
+.menu-lien-palette
+{
+	text-decoration: none;
+	color: #72BF56;
+	font-family: 'Kalam';
+}
+
+/*Page Menu 4*/
+.grand-menu-palette /*le gros bloc sur la page menu-4.html*/
+{
+  margin: 4%;
+  text-align: center;
+  font-family: 'Kaushan Script';
+  padding: 2% 3%;
+}
+.barre-palette
+{
+  background: -webkit-linear-gradient(left, #3D9339, #BFFF7E);
+  width: 30%;
+  height: 10px;
+}
+.barre-palette2 
+{
+  background: -webkit-linear-gradient(right, #3D9339, #BFFF7E);
+  width: 30%;
+  height: 10px;
+}
+
+/*Responsive*/
+@media all and (min-device-width: 320px) and (max-width: 480px) 
+{
+  .menu-commun
+  {
+    width: 100%;
+  }
+  .prochainement
+  {
+    width: 100%;
+  }
+}

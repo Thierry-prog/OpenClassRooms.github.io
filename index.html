@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name=viewport content="width=device-width, initial-scale=1.0"/>
+        <!--Utiliser la balise meta viewport pour contrôler la mise en page sur les navigateurs mobiles
+        La propriété width contrôle la taille du viewport. Elle peut être réglée à une valeur précise de pixels, comme width=600, ou bien à la valeur spéciale device-width qui correspond à la largeur de l'écran en pixels CSS à l'échelle 100%. (Il existe les propriétés et valeurs height et device-height correspondantes, qui peuvent être utiles pour les pages contenant des éléments qui changent de taille ou de position en fonction de la hauteur du viewport.)
+        La propriété initial-scale contrôle le niveau de zoom lorsque la page est chargée pour la première fois. Les propriétés maximum-scale, minimum-scale, et user-scalable contrôlent la manière dont les utilisateurs sont autorisés à zoomer ou dézoomer une page.
+        Avec "width=device-width" on demande à ce que le viewport soit le même que la largeur de l'écran.
+        user-scalable=yes => autorise l'utilisateur à zoomer si il le souhaite :--> 
+        <title>ohmyfood</title>
+        <link rel="stylesheet" href="style.css" />
+        <!--Pour lier la partie HTML avec le CSS, important à retenir !-->
+        <link href="https://fonts.googleapis.com/css?family=Devonshire&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Croissant+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gelasio&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f7591675f1.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- Tête de page-->
+        <header class="header">
+            <h1><a href="index.html" class="T-header">ohmyfood</a></h1>
+        </header>
+
+        <!--Menus-->
+        <div class="menu">
+            <div class="menu-commun menu-note">
+                <i class="fas fa-music degrade-note"></i>
+                <p class="menu-note-titre">La note enchantée</p>
+                <a href="Menu-1.html" class="menu-lien-note">MENU</a>
+            </div>
+            <div class="menu-commun menu-chic">
+                <p class="menu-chic-titre">Le chic à la française</p>
+                <a href="Menu-2.html" class="menu-lien-chic">Menu</a>
+            </div>
+            <div class="menu-commun menu-delice"> 
+                <p class="menu-delice-titre">Le délice des papilles</p>
+                <a href="Menu-3.html" class="menu-lien-delice">Menu</a>
+            </div>
+            <div class="menu-commun menu-palette">
+                <p class="menu-palette-titre">La palette du goût</p>
+                <a href="Menu-4.html" class="menu-lien-palette">Menu</a>
+            </div>
+        </div>
+
+        <!--Prochainement-->
+        <div class="prochainement_container">
+            <div class="prochainement">
+                Prochainement<i>.</i> <i>.</i> <i>.</i>
+            </div>
+        </div>
+        
+        <!--Pied de page-->
+        <footer class="footer">
+            <a href="Mentions.html" class="footer--l">Mentions légales
+            </a>
+            <a href="mailto:ohmyfood@outlook.com" class="footer--l">Contactez-nous
+            </a>
+        </footer>
+    </body>
+</html>    
