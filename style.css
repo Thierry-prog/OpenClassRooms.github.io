@@ -522,7 +522,7 @@ h2
 }
 
 /*Responsive*/
-@media all and (min-device-width: 320px) and (max-width: 480px) 
+@media all and (min-width: 320px) and (max-width: 480px) 
 {
   .menu-commun
   {
