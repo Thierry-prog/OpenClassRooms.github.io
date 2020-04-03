@@ -82,11 +82,15 @@ h1
 }
 .footer--l:hover /*définition de l'animation sur le "wiggle"*/
 {
-  -webkit-animation: wiggle 100ms;
+  -webkit-animation: wiggle 100ms; /*pour que ça bouge dans tous les sens et pas juste un petit peu*/
           animation: wiggle 100ms;
-  -webkit-animation-iteration-count: 2;
+  -webkit-animation-iteration-count: 2; /* temps du wiggle*/
           animation-iteration-count: 2;
 }
+/*la directive keyframes qui veut dire "je vais définir une animation". On doit lui donner un nom pour s'en resservir ensuite. Ici, il s'agit de "wiggle".
+Ensuite, on définit les étapes de l'animation. A 0% (au début), l'objet n'aura pas bougé. Puis, à 100% (à la fin), il aura bougé.
+Je peux définir une étape à 10%, à 87%, etc.*/
+
 @-webkit-keyframes wiggle
 {
   0% {
@@ -123,8 +127,10 @@ h1
 .menu-note
 {
 	background-color: #FCDFDB;
+  -webkit-box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px gray;
 }  	
-.menu-note:hover /*zoom quand on survol*/
+.menu-note:hover /*zoom quand on survol avec la souris*/
 {
 	font-size: 3em; /*on augmente donc la taille*/
   opacity: 0.8;
@@ -134,7 +140,7 @@ h1
   font-size: 150%;
 	background: -webkit-linear-gradient(left, #F04A5E, #F78F6A);
 	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   margin: 0 3%;
 }
 .menu-note-titre /*titre note enchanté*/
@@ -234,6 +240,8 @@ h2
 .menu-chic
 {
 	background-color: #FFF5FE;
+  -webkit-box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px gray;
 }
 .menu-chic:hover /*zoom quand on survol*/
 {
@@ -405,6 +413,8 @@ h2
 .menu-delice
 {
 	background-color: #F9F9F9;
+  -webkit-box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px gray;
 }
 .menu-delice:hover /*zoom quand on survol*/
 {
@@ -480,6 +490,8 @@ h2
 .menu-palette
 {
   	text-align: center;
+    -webkit-box-shadow: 0 0 10px gray;
+    box-shadow: 0 0 10px gray;
 }
 .menu-palette:hover /*zoom quand on survol*/
 {
